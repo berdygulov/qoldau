@@ -1,0 +1,52 @@
+/* Colors */
+/* vars --> */
+$dark: #1E1E1E;
+$black: #000;
+$white: #FFFFFF;
+
+/* Brand Colors */
+/* vars --> */
+$blue: #003B99;
+$yellow: #FEB922;
+$green: #07F03A;
+
+/* Gradients */
+/* vars --> */
+
+/* Global Styles */
+* {
+    font-family: 'Circe';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+body {
+    color: $black;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+ul,ol {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+input {
+    border: none;
+    &[type="submit"] {
+        cursor: pointer;
+    }
+}
