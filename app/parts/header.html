@@ -20,59 +20,153 @@
 
 <body>
 	<header class="header" id="header">
-		<!-- Header-->
-		<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		
-		<svg class="info">
-			<use xlink:href="images/dist/sprite.svg#logo_blue"></use>
-		</svg>
-		<a class="arrow arrow-left blue">
-			<svg>
-				<use xlink:href="images/dist/sprite.svg#arrow-left"></use>
-			</svg>
-		</a>
-		<a class="arrow arrow-right yellow">
-			<svg>
-				<use xlink:href="images/dist/sprite.svg#arrow-right"></use>
-			</svg>
-		</a>
-		<div class="slider-dots yellow">
-			<span class="slider-dot"></span>
-			<span class="slider-dot active"></span>
-			<span class="slider-dot"></span>
-			<span class="slider-dot"></span>
-		</div>
-		<a href="#" class="btn-more">
-			Подробнее
-			<svg>
-				<use xlink:href="images/dist/sprite.svg#arrow-right"></use>
-			</svg>
-		</a>
-		<div class="advantage-block blue">
-			<div class="advantage-inner">
-				<svg>
-					<use xlink:href="images/dist/sprite.svg#math-percent"></use>
-				</svg>
-				<p>
-					Процентная ставка <br>
-					и комиссия 0%
-				</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="header-inner d-flex align-items-center">
+						<a href="/" class="header-logo d-block">
+							<svg>
+								<use xlink:href="images/dist/sprite.svg#logo_blue"></use>
+							</svg>
+						</a>
+						<!-- Header panel with Other Elements -->
+						<div class="header-panel">
+							<div class="header-panel-inner">
+								<!-- Close button for menu-->
+								<button class="close" type="button">
+									<svg>
+										<use xlink:href="images/dist/sprite.svg#close"></use>
+									</svg>
+									Закрыть
+								</button>
+								<!-- Header panel with User -->
+								<ul class="header-user flex-column justify-content-center">
+									<li class="header-user-block">
+										<span class="header-user-desc">
+											Необходимо войти в систему
+										</span>
+										<div class="header-user-btn-wr">
+											<a href="#" class="btn btn-sm btn-yellow_outlined icon_left">
+												<svg>
+													<use xlink:href="images/dist/sprite.svg#user-list"></use>
+												</svg>
+												Войти
+											</a>
+										</div>
+									</li>
+								</ul>
+								<!-- Header panel with Contacts -->
+								<ul class="header-contacts flex-column justify-content-center">
+									<li class="header-contacts-block">
+										<h6 class="header-contacts-desc">
+											Телефоны:
+										</h6>
+										<div class="header-contacts-btn-wr">
+											<a href="tel:+380985554433" class="btn btn-sm btn-yellow_outlined icon_left">
+												<svg>
+													<use xlink:href="images/dist/sprite.svg#smartphone"></use>
+												</svg>
+												+7 (777) 568 4835
+											</a>
+										</div>
+										<div class="header-contacts-btn-wr">
+											<a href="tel:+380985554433" class="btn btn-sm btn-yellow_outlined icon_left">
+												<svg>
+													<use xlink:href="images/dist/sprite.svg#smartphone"></use>
+												</svg>
+												+7 (707) 468 7755
+											</a>
+										</div>
+									</li>
+									<li class="header-contacts-block">
+										<h6 class="header-contacts-desc">
+											Электронная почта:
+										</h6>
+										<div class="header-contacts-btn-wr">
+											<a href="#" class="btn btn-sm btn-yellow_outlined icon_left">
+												<svg>
+													<use xlink:href="images/dist/sprite.svg#mail"></use>
+												</svg>
+												info@pkqq.kz
+											</a>
+										</div>
+									</li>
+									<li class="header-contacts-block">
+										<h6 class="header-contacts-desc">
+											Адрес:
+										</h6>
+										<span class="header-contacts-text">
+											Республика Казахстан, Западно- <br>
+											Казахстанская область, г. Уральск, ул. Астана, 28
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Header panel with Menu -->
+						<div class="header-panel menu">
+							<div class="header-panel-inner">
+								<!-- Close button for menu-->
+								<button class="close" type="button">
+									<svg>
+										<use xlink:href="images/dist/sprite.svg#close"></use>
+									</svg>
+									Закрыть
+								</button>
+								<ul class="header-menu">
+									<li>
+										<a href="#">Главная</a>
+									</li>
+									<li>
+										<a href="#">О нас</a>
+									</li>
+									<li>
+										<a href="#">Программы</a>
+									</li>
+									<li>
+										<a href="#">Гарантии</a>
+									</li>
+									<li>
+										<a href="#">Новости</a>
+									</li>
+									<li>
+										<a href="#">Отзывы</a>
+									</li>
+									<li>
+										<a href="#">Инструкции</a>
+									</li>
+									<li>
+										<a href="#">Контакты</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<ul class="header-right">
+							<li>
+								<button data-panel-element="header-contacts" data-not-menu-btn="true" class="header-btn" type="button">
+									<svg>
+										<use xlink:href="images/dist/sprite.svg#smartphone"></use>
+									</svg>
+								</button>
+							</li>
+							<li>
+								<button data-panel-element="header-user" data-not-menu-btn="true" class="header-btn" type="button">
+									<svg>
+										<use xlink:href="images/dist/sprite.svg#user-list"></use>
+									</svg>
+								</button>
+							</li>
+							<li>
+								<button data-not-menu-btn="false" class="d-xl-none header-btn" type="button">
+									<svg>
+										<use xlink:href="images/dist/sprite.svg#more-alt"></use>
+									</svg>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-		</div>
-		<a href="#" class="btn btn-md btn-blue icon_left">
-			<svg>
-				<use xlink:href="images/dist/sprite.svg#user-list"></use>
-			</svg>
-			Личный кабинет
-		</a>
-		<div class="steps-block">
-			<h5 class="steps-block-title">
-				<span class="num">1.</span>
-				Встреча в офисе кооператива
-			</h5>
-			<p class="steps-block-desc">
-				Получение консультации по программам кооператива, получение копии договоров о паевом взносе и аренды квартиры для изучения с юристом.
-			</p>
 		</div>
 	</header>
 	

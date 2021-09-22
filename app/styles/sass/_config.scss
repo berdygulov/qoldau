@@ -3,12 +3,14 @@
 $dark: #1E1E1E;
 $black: #000;
 $white: #FFFFFF;
+$stroke: rgba($color: #1E1E1E, $alpha: .2);
 
 /* Brand Colors */
 /* vars --> */
 $blue: #003B99;
 $yellow: #FEB922;
 $green: #07F03A;
+$transition: ease 0.2s;
 
 /* Gradients */
 /* vars --> */
@@ -21,7 +23,7 @@ $green: #07F03A;
     box-sizing: border-box;
 }
 
-html {
+html,body {
     font-size: 16px;
     line-height: 16px;
 }
@@ -49,4 +51,8 @@ input {
     &[type="submit"] {
         cursor: pointer;
     }
+}
+button {
+    border: none;
+    background: none;
 }

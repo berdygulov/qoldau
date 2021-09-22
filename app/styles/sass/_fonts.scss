@@ -32,3 +32,14 @@
 	font-weight: 700;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Circe';
+	src: url('Circe-Light.eot');
+	src: local('Circe Light'), local('Circe-Light'),
+		url('Circe-Light.eot?#iefix') format('embedded-opentype'),
+		url('Circe-Light.woff') format('woff'),
+		url('Circe-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
