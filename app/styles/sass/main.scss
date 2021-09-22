@@ -150,8 +150,6 @@ body {
     /* Sizes */
     &-sm {
         font-size: 1rem;
-        // padding: 0.5em 1em;
-        // line-height: 1.5rem;
         &.icon_left {
             svg {
                 margin-right: 0.25em;
@@ -428,14 +426,6 @@ body {
         padding: 1.2rem 0;
         justify-content: space-between;
     }
-    &-logo {
-        height: 70px;
-        width: 206px;
-        svg {
-            max-height: 100%;
-            max-width: 100%;
-        } 
-    }
     &-right {
         margin-left: 1.5rem;
         display: flex;
@@ -656,9 +646,76 @@ body {
 
 /* Footer */ 
 .footer {
+    padding: 2rem 0;
     margin-top: 2rem;
+    background: $blue;
+    &-info {
+        & > *:not(:first-child) {
+            margin-top: 2rem;
+        }
+    }
+    &-block {
+        &-title {
+            color: $white;
+        }
+        &-list {
+            margin-top: 2rem;
+            color: $white;
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+                a, p {
+                    font-size: 1.125rem;
+                    color: $white;
+                    font-weight: 300;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+    &-rights {
+        color: $white;
+        line-height: 1.5rem;
+        font-size: 1.125rem;
+    }
+    &-inner {
+        & > .row {
+            & > div {
+                &:not(:first-child) {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 576px) {
+        padding: 4rem 0;
+    }
+    @media screen and (min-width: 768px) {
+        &-inner {
+            & > .row {
+                & > div {
+                    &:not(:first-child) {
+                        margin-top: 0;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
+/* Logo block*/
+.logo {
+    height: 70px;
+    width: 206px;
+    svg {
+        max-height: 100%;
+        max-width: 100%;
+    } 
+}
 /* Hero */
 .hero {
     padding: 2.07rem 0 2.07rem 0;
@@ -812,9 +869,13 @@ body {
                 display: flex;
                 align-items: center;
             }
-        } 
+        }     
+    }
+    @media screen and (min-width: 992px) {
         &-image {
             margin-top: 0;
+            display: flex;
+            justify-content: flex-end;
         }       
     }
 }
@@ -903,6 +964,130 @@ body {
             & > .row {
                 & > div {
                     margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    &-title {
+        font-size: 1rem;
+        line-height: 1rem;
+        a {
+            font-size: 1rem;
+            line-height: 1rem;
+        }
+        &.current {
+            color: $yellow;
+        }
+    }
+    &-sep {
+        line-height: 1rem;
+    }
+    @media screen and (min-width: 576px) {
+        &-title {
+            font-size: 1.125rem;
+            line-height: 1.125rem;
+            a {
+                font-size: 1.125rem;
+                line-height: 1.125rem;
+            }
+        }       
+    }
+}
+
+/* Single page */
+.page {
+    padding: 2rem 0 0 0;
+    &-header {
+        padding: 1.5rem 0;
+        border-top: 0.0625rem solid $stroke;
+        border-bottom: 0.0625rem solid $stroke;
+        &-btn {
+            font-size: 0.85rem;
+        }
+    }
+    &-single {
+        &-title {
+            margin-bottom: 1em;
+        }
+        &-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1.5rem;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &-content {
+            margin-top: 2rem;
+            &-block {
+                margin-top: 2rem;
+                & > p {
+                    font-size: 1.25rem;
+                    line-height: 1.75rem;
+                    margin-top: 1rem;
+                }
+                & > h2 {
+                    margin-bottom: 0.84em;
+                    font-size: 2rem;
+                }
+                & > h3,
+                & > h4,
+                & > h5 {
+                    margin-bottom: .46em;
+                }
+                & > h3 {
+                    font-size: 1.8rem;
+                }
+                & > h4 {
+                    font-size: 1.6rem;
+                }
+                & > h5 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 576px) {
+        padding: 4rem 0 0 0;
+        &-header {
+            &-btn {
+                font-size: 1rem;
+            }
+        }  
+        &-single {
+            &-image {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        &-single {
+            &-image {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    @media screen and (min-width: 992px) {
+        &-single {
+            &-image {
+                img {
+                    width: auto;
+                    max-height: 52.63rem;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 992px) {
+        &-single {
+            &-image {
+                img {
+                    max-height: 47.625rem;
                 }
             }
         }
