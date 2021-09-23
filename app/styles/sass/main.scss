@@ -25,6 +25,17 @@ body {
         overflow: hidden;
     }
 }
+.main {
+    height: 100vh;
+    &-content {
+        margin-bottom: 2rem;
+    }
+    @media screen and (min-width: 576px) {
+        &-content {
+            margin-bottom: 4rem;
+        }
+    }
+}
 
 /* Components */
 /* Arrows */
@@ -410,13 +421,6 @@ body {
             }
         }
     }
-    // @media screen and (min-width: 768px) {
-    //     &-block {
-    //         &-title {
-    //             align-items: flex-start;
-    //         }
-    //     }  
-    // }
 }
 /* Components */
 
@@ -438,7 +442,7 @@ body {
     &-btn {
         padding: 0.5rem 0.625rem;
         border-radius: 0.5rem;
-        border: 1px $stroke solid;
+        border: 0.0625rem $stroke solid;
         cursor: pointer;
         background: transparent;
         svg {
@@ -647,8 +651,8 @@ body {
 /* Footer */ 
 .footer {
     padding: 2rem 0;
-    margin-top: 2rem;
     background: $blue;
+    margin-top: auto;
     &-info {
         & > *:not(:first-child) {
             margin-top: 2rem;
@@ -947,7 +951,7 @@ body {
     }
 }
 
-/* Range element*/
+/* Innumbers element*/
 .innumbers {
     &-title {
         color: $blue;
@@ -1009,10 +1013,10 @@ body {
             font-size: 0.85rem;
         }
     }
+    &-title {
+        margin-bottom: 1em;
+    }
     &-single {
-        &-title {
-            margin-bottom: 1em;
-        }
         &-image {
             width: 100%;
             height: auto;
@@ -1026,6 +1030,35 @@ body {
             margin-top: 2rem;
             &-block {
                 margin-top: 2rem;
+                ul,
+                ol {
+                    margin-top: 1rem;
+                    color: $yellow;
+                    font-size: 1.25rem;
+                    line-height: 1.75rem;
+                    list-style-position: inside;
+                    li {
+                        p { 
+                            display: inline;
+                            font-size: 1.25rem;
+                            line-height: 1.75rem;
+                            color: $dark;
+                        }
+                    }
+                }
+                ul {
+                    list-style-type: square;
+                    &::marker {
+                        content: '';
+                        display: block;
+                        width: 0.4375rem;
+                        height: 0.4375rem;
+                        background: $yellow;
+                    }
+                }
+                ol {
+                    list-style-type: decimal;
+                }
                 & > p {
                     font-size: 1.25rem;
                     line-height: 1.75rem;
@@ -1048,6 +1081,17 @@ body {
                 }
                 & > h5 {
                     font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    &-archive {
+        &-list {
+            & > .row {
+                & > div {
+                    &:not(:last-child) {
+                        margin-bottom: 1.5rem;
+                    }
                 }
             }
         }
@@ -1082,12 +1126,142 @@ body {
                 }
             }
         }
+        &-archive {
+            &-list {
+                & > .row {
+                    & > div {
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
     }
     @media screen and (min-width: 992px) {
         &-single {
             &-image {
                 img {
                     max-height: 47.625rem;
+                }
+            }
+        }
+    }
+}
+
+/* Input element*/
+input[type=text] {
+    padding: 0.55em 0.89em 0.55em 2.4em;
+    border: 0.055em solid $stroke;
+    border-radius: 0.45em;
+    font-size: 1.125rem;
+    color: $dark;
+    &::placeholder {
+        color: $stroke;
+    }
+}
+
+/* Wrapper for type=text Input*/
+.input {
+    &-wrapper {
+        font-size: 1.125rem;
+        display: inline-block;
+        position: relative;
+        svg {
+            position: absolute;
+            left: 0.89em;
+            top: 0.55em;
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            min-width: 1.5rem;
+            min-height: 1.5rem;
+            fill: $stroke;
+        }
+        &.no_icon {
+            input[type=text] {
+                padding: 0.55em 0.89em 0.55em 0.89em;
+            }
+        }
+    }
+}
+
+/* Table*/
+.table {    
+    &-row {
+        display: flex;
+        flex-direction: column;
+        border: 0.125em solid $stroke;
+        padding: 0.89em;
+        border-radius: 0.45em;
+        font-size: 1rem;
+        .table-col {
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            padding-bottom: 0.8em;
+            &:not(:last-child) {
+                border-bottom: 0.055em solid $stroke;
+            }
+            &.action {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                button {
+                    color: $blue;
+                    display: inline-block;
+                    cursor: pointer;
+                }
+            }
+            span, button {
+                font-size: 1rem;
+                line-height: 1.5rem;
+                color: $dark;
+            }
+            &::before {
+                content: attr(data-label);
+                display: block;
+                margin-bottom: 0.8em;
+                font-weight: 700;
+                font-size: 1rem;
+            }
+            &:not(:last-child) {
+                margin-bottom: 1.5em;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        &-row {
+            flex-direction: row;
+            .table-col {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                flex: 1 0 0;
+                &:not(:last-child) {
+                    border-bottom: none;
+                    margin-bottom: 0;
+                }
+                &::before {
+                    content: none;
+                }
+                span, button {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+        &-head {
+            border-radius: 0.45em;
+            margin-bottom: 1rem;
+            background: $blue;
+            .table-col {
+                &.action {
+                    button {
+                        color: $white;
+                    }
+                }
+                span, button {
+                    color: $white;
                 }
             }
         }
