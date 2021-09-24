@@ -9,6 +9,10 @@ export function clipboardFunction() {
     const clip = new Clipboard('.btn-clip');
     
     clip.on('success', function(e) {
-        // e.clearSelection();
+        const note = $('.site-note');
+        $(note).addClass('active');
+        $(note).children('.site-note-content')
+            .text('Данные скопированы!');
+        e.clearSelection();
     });
 }
