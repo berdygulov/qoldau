@@ -1,6 +1,8 @@
 /* Import jQuery module (npm i jquery) */
 import $ from 'jquery';
 import Swiper from 'swiper/bundle';
+import 'jquery-ui/ui/widgets/datepicker';
+import 'jquery-ui/ui/i18n/datepicker-ru';
 window.jQuery = $
 window.$ = $
 
@@ -16,8 +18,14 @@ header.closeHeaderPanel();
 range.inputRangeHandler();
 
 /* Clipboard function */
-clipboard.clipboardFunction();
+if ($('.btn-clip').length > 0) {
+  clipboard.clipboardFunction(1000);
+}
 
+/* Datepicker */
+$('#datepicker').datepicker();
+
+/* Swiper */
 const swiper = new Swiper('.hero-swiper', {
   'speed': 300,
   'spaceBetween': 30,

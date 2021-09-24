@@ -3,6 +3,7 @@
 @import 'typography';
 @import '../../../node_modules/bootstrap/dist/css/bootstrap-grid.css';
 @import '../../../node_modules/swiper/swiper-bundle.css';
+@import '../../../node_modules/jquery-ui/themes/base/datepicker.css';
 
 .bred {
     border: 1px solid red;
@@ -836,6 +837,20 @@ body {
 
 /* Steps section*/
 .steps {
+    &-content:nth-child(even) {
+        .row {
+            div {
+                &:nth-child(2) {
+                    order: 1;
+                }
+            }
+            div {
+                &:nth-child(1) {
+                    order: 2;
+                }
+            }
+        }
+    }
     &-title {
         color: $blue;
         display: inline-flex;
@@ -1450,8 +1465,8 @@ input[type=text] {
     transition: 0.2s all ease;
     z-index: 99;
     width: 100vw;
-    border-top-left-radius: 0.2em;
-    border-top-right-radius: 0.2em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
     left: 0;
     bottom: 0;
     background: $yellow;
@@ -1460,11 +1475,11 @@ input[type=text] {
     color: $dark;
     font-weight: 400;
     box-shadow: 0 -.3125rem 0.75rem 0 rgba(34, 60, 80, 0.2);
-    opacity: 0;
+    transform: translateY(100%);
     pointer-events: none;
     user-select: none;
     &.active {
-        opacity: 1;
+        transform: translateY(0);
         pointer-events: initial;
         user-select: initial;
     }
@@ -1505,19 +1520,24 @@ input[type=text] {
     }
     &-block {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         font-size: 1rem;
-        line-height: 1em;
         overflow: hidden;
         width: 100%;
         & > * {
-            flex: 1 1 auto;
+            width: 50%;
         }
         &.no_icon {
             .shortinfo-btn {
                 display: none;                
             }
         }
+    }
+    &-field,
+    &-data {
+        line-height: 1.125em;
+        display: flex;
+        align-items: center;
     }
     &-field {
         padding: 1em;
@@ -1530,9 +1550,7 @@ input[type=text] {
         border-bottom: .0625em solid $stroke;
     }
     &-data {
-        display: flex;
-        align-items: center;
-        padding: 1em 5.625em 1em 1em;
+        padding: 1em 3.625em 1em 1em;
         color: $white;
         background: $blue;
         border-top-right-radius: 0.5em;
@@ -1550,6 +1568,9 @@ input[type=text] {
     @media screen and (min-width: 576px) {
         &-block {
             font-size: 1.125rem;
+        }
+        &-data {
+            padding: 1em 5.625em 1em 1em;
         }
     }
 }
