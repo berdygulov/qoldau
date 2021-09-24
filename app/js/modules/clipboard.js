@@ -5,7 +5,7 @@ window.jQuery = $
 window.$ = $
 
 /* Clipboard function */
-export function clipboardFunction() {
+export function clipboardFunction(timer) {
     const clip = new Clipboard('.btn-clip');
     
     clip.on('success', function(e) {
@@ -14,5 +14,8 @@ export function clipboardFunction() {
         $(note).children('.site-note-content')
             .text('Данные скопированы!');
         e.clearSelection();
+        setTimeout(function(timer) {
+            $(note).removeClass('active');
+        }, timer);
     });
 }

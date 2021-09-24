@@ -16,7 +16,9 @@ header.closeHeaderPanel();
 range.inputRangeHandler();
 
 /* Clipboard function */
-clipboard.clipboardFunction();
+if ($('.btn-clip').length > 0) {
+  clipboard.clipboardFunction(1000);
+}
 
 const swiper = new Swiper('.hero-swiper', {
   'speed': 300,
