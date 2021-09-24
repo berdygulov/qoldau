@@ -13,6 +13,17 @@
 
 @font-face {
 	font-family: 'Circe';
+	src: url('../fonts/Circe-Regular.eot');
+	src: local('Circe'), local('Circe-Regular'),
+		url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Circe-Regular.woff') format('woff'),
+		url('../fonts/Circe-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Circe';
 	src: url('../fonts/Circe-Light.eot');
 	src: local('Circe Light'), local('Circe-Light'),
 		url('../fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),

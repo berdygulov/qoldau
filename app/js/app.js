@@ -7,12 +7,16 @@ window.$ = $
 /* Function import  */
 import * as header from './modules/header.js';
 import * as range from './modules/range.js';
+import * as clipboard from './modules/clipboard.js';
 
 /* Header functions */
 header.openHeaderPanel();
 header.openMenuPanel();
 header.closeHeaderPanel();
 range.inputRangeHandler();
+
+/* Clipboard function */
+clipboard.clipboardFunction();
 
 const swiper = new Swiper('.hero-swiper', {
   'speed': 300,
@@ -27,3 +31,8 @@ const swiper = new Swiper('.hero-swiper', {
       'prevEl': '.hero-swiper-arrow-prev',
   },
 });
+
+const noteCloseBtn = $('.site-note-close');
+$(noteCloseBtn).on('click', function() {
+  $(this).parent('.site-note').removeClass('active');
+})
