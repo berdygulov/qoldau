@@ -4,7 +4,9 @@
 @import '../../../node_modules/bootstrap/dist/css/bootstrap-grid.css';
 @import '../../../node_modules/swiper/swiper-bundle.css';
 @import '../../../node_modules/jquery-ui/themes/base/datepicker.css';
+@import '../../../node_modules/jquery-ui/themes/base/selectmenu.css';
 @import 'datepicker';
+@import 'selectmenu';
 
 .bred {
     border: 1px solid red;
@@ -1168,17 +1170,18 @@ input[type=text] {
     padding: 0.55em 2.4em 0.55em 2.4em;
     border: 0.055em solid $stroke;
     border-radius: 0.45em;
+    width: 100%;
     font-size: 1rem;
     color: $dark;
     &::placeholder {
         color: $stroke;
     }
-    @media screen and (min-width: 576px) {
-        font-size: 1.125rem;
-    }
     &:focus {
         outline: 0.055em solid $dark;
         border-radius: 0.45em;
+    }
+    @media screen and (min-width: 576px) {
+        font-size: 1.125rem;
     }
 }
 
@@ -1188,6 +1191,7 @@ input[type=text] {
         font-size: 1rem;
         display: inline-block;
         position: relative;
+        width: 100%;
         &.active {
             svg.input-arrow,
             svg.input-icon {

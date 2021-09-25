@@ -11,6 +11,7 @@ import * as header from './modules/header.js';
 import * as range from './modules/range.js';
 import * as clipboard from './modules/clipboard.js';
 import * as datepicker from './modules/datepicker.js';
+import * as selectmenu from './modules/selectmenu.js';
 
 /* Header functions */
 header.openHeaderPanel();
@@ -27,6 +28,11 @@ if ($('.btn-clip').length > 0) {
 if ($('.datepicker').length > 0) {
   datepicker.openDataPicker();
 }
+
+/* Selectmenu initialization*/
+// if ($('.selectmenu').length > 0) {
+  selectmenu.openSelectMenu();
+// }
 
 /* Input focus and blur function */
 if ($('input').length > 0 ) {
