@@ -1172,7 +1172,9 @@ input[type=text] {
     border-radius: 0.45em;
     width: 100%;
     font-size: 1rem;
+    font-weight: 300;
     color: $dark;
+    transition: $transition;
     &::placeholder {
         color: $stroke;
     }
@@ -1193,6 +1195,12 @@ input[type=text] {
         position: relative;
         width: 100%;
         &.active {
+            .ui-selectmenu-button {
+                &.ui-button {
+                    border: 0.055em solid $dark;
+                    border-radius: 0.45em;
+                }
+            }
             svg.input-arrow,
             svg.input-icon {
                 fill: $dark;
@@ -1211,7 +1219,7 @@ input[type=text] {
             min-width: 1.5rem;
             min-height: 1.5rem;
             fill: $stroke;
-            transition: all ease 0.2s;
+            transition: $transition;
         }
         svg.input-icon {
             left: 0.89em;
@@ -1487,7 +1495,7 @@ input[type=text] {
 /* Note block */
 .site-note {
     position: fixed;
-    transition: 0.2s all ease;
+    transition: $transition;
     z-index: 99;
     width: 100vw;
     border-top-left-radius: 0.5em;

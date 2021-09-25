@@ -30,9 +30,9 @@ if ($('.datepicker').length > 0) {
 }
 
 /* Selectmenu initialization*/
-// if ($('.selectmenu').length > 0) {
+if ($('.selectmenu').length > 0) {
   selectmenu.openSelectMenu();
-// }
+}
 
 /* Input focus and blur function */
 if ($('input').length > 0 ) {
