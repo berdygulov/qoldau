@@ -1,0 +1,28 @@
+.ui-selectmenu {
+    &-button {
+        &.ui-button {
+            font-size: 1rem;
+            display: block;
+            width: auto;
+            padding: 0.78em 2.4em;
+            border: 0.055em solid $stroke;
+            border-radius: 0.45em;
+            color: $dark;
+        }
+    }
+    &-text {
+        margin: 0;
+    }
+    &-icon {
+        &.ui-icon {
+            display: none;
+        }
+    }
+    @media screen and (min-width: 576px) {
+        &-button {
+            &.ui-button {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
