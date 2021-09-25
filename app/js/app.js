@@ -23,7 +23,12 @@ if ($('.btn-clip').length > 0) {
 }
 
 /* Datepicker */
-$('#datepicker').datepicker();
+$('#datepicker').datepicker({ 
+  'showOtherMonths': true,
+  'prevText': '',
+  'nextText': '',
+  // 'defaultDate': '',
+});
 
 /* Swiper */
 const swiper = new Swiper('.hero-swiper', {

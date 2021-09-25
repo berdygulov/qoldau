@@ -1,3 +1,120 @@
-// .ui-datepicker {
-    // border: ;
-// }
+.ui-datepicker {
+    border: 0.0625rem $dark solid !important;
+    border-radius: 1rem;
+    background: $white;
+    padding: 1rem;
+    margin-top: 0.875rem;
+    width: auto;
+    table {
+        margin: 0;
+    }
+    &-calendar {
+        thead {
+            tr {
+                th {
+                    padding: 0;
+                    &:not(:last-child) {
+                        padding: 0.75rem 0.5rem 0 0;
+                    }
+                    &:last-child {
+                        padding-top: 0.75rem;
+                    }
+                    span {
+                        font-size: 1.125rem;
+                        line-height: 1.125rem;
+                        font-weight: 400;
+                        color: $dark;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 0;
+                    &:not(:last-child) {
+                        padding: 0.75rem 0.5rem 0 0;
+                    }
+                    &:last-child {
+                        padding-top: 0.75rem;
+                    }
+                    &.ui-state-disabled {
+                        span.ui-state-default {
+                            color: $stroke;
+                        }
+                    }
+                    span.ui-state-default,
+                    a.ui-state-default {
+                        font-size: 1.125rem;
+                        line-height: 1.125rem;
+                        font-weight: 400;
+                        color: $dark;
+                        text-align: center
+                    }
+                    a.ui-state-highlight {
+                        font-weight: 700;
+                    }
+                    a.ui-state-active {
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+    }
+    .ui-datepicker {
+        &-header {
+            margin: 0 -1rem;
+            border-bottom: 0.0625rem solid $stroke;
+            padding: 0 0 0.94rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $dark;
+            font-size: 1.125rem;
+            font-weight: 400;
+        }
+        &-title {
+            margin: 0;
+            order: 2;
+            line-height: 1rem;
+        }
+        &-prev,
+        &-next {
+            position: relative;
+            top: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            cursor: pointer;
+            span.ui-icon {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                top: 0;
+                left: 0;
+            }
+            &:hover {
+                top: 0;
+            }
+        }
+        &-prev {
+            order: 1;
+            left: 1rem;
+            span.ui-icon {
+                background: url(../images/dist/icons/arrow-left.svg) center no-repeat;
+            }
+            &:hover {
+                left: 1rem;      
+            }
+        }
+        &-next {
+            order: 3;
+            right: 1rem;
+            span.ui-icon {
+                background: url(../images/dist/icons/arrow-right.svg) center no-repeat;
+            }
+            &:hover {
+                right: 1rem;
+            }
+        }
+    }
+}
