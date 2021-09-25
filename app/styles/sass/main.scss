@@ -1165,7 +1165,7 @@ body {
 
 /* Input element*/
 input[type=text] {
-    padding: 0.55em 0.89em 0.55em 2.4em;
+    padding: 0.55em 2.4em 0.55em 2.4em;
     border: 0.055em solid $stroke;
     border-radius: 0.45em;
     font-size: 1rem;
@@ -1176,6 +1176,10 @@ input[type=text] {
     @media screen and (min-width: 576px) {
         font-size: 1.125rem;
     }
+    &:focus {
+        outline: 0.055em solid $dark;
+        border-radius: 0.45em;
+    }
 }
 
 /* Wrapper for type=text Input*/
@@ -1184,9 +1188,18 @@ input[type=text] {
         font-size: 1rem;
         display: inline-block;
         position: relative;
-        svg {
+        &.active {
+            svg.input-arrow,
+            svg.input-icon {
+                fill: $dark;
+            }
+            svg.input-arrow {
+                transform: rotate(90deg);
+            }
+        }
+        svg.input-arrow,
+        svg.input-icon {
             position: absolute;
-            left: 0.89em;
             top: 0.55em;
             display: block;
             width: 1.5rem;
@@ -1194,6 +1207,13 @@ input[type=text] {
             min-width: 1.5rem;
             min-height: 1.5rem;
             fill: $stroke;
+            transition: all ease 0.2s;
+        }
+        svg.input-icon {
+            left: 0.89em;
+        }
+        svg.input-arrow {
+            right: 0.89em;
         }
         &.no_icon {
             input[type=text] {

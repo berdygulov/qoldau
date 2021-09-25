@@ -10,6 +10,7 @@ window.$ = $
 import * as header from './modules/header.js';
 import * as range from './modules/range.js';
 import * as clipboard from './modules/clipboard.js';
+import * as datepicker from './modules/datepicker.js';
 
 /* Header functions */
 header.openHeaderPanel();
@@ -22,13 +23,23 @@ if ($('.btn-clip').length > 0) {
   clipboard.clipboardFunction(1000);
 }
 
-/* Datepicker */
-$('#datepicker').datepicker({ 
-  'showOtherMonths': true,
-  'prevText': '',
-  'nextText': '',
-  // 'defaultDate': '',
-});
+/* Datepicker initialization*/
+if ($('.datepicker').length > 0) {
+  datepicker.openDataPicker();
+}
+
+/* Input focus and blur function */
+if ($('input').length > 0 ) {
+  /* Datepicker or Select handler function*/
+  $('input').on('focus', function() {
+    $(this).parent('.input-wrapper')
+      .addClass('active');
+  })
+  $('input').on('blur', function() {
+    $(this).parent('.input-wrapper')
+      .removeClass('active');
+  })
+};
 
 /* Swiper */
 const swiper = new Swiper('.hero-swiper', {
@@ -45,6 +56,7 @@ const swiper = new Swiper('.hero-swiper', {
   },
 });
 
+/* Notification block on the bottom of the site*/
 const noteCloseBtn = $('.site-note-close');
 $(noteCloseBtn).on('click', function() {
   $(this).parent('.site-note').removeClass('active');
