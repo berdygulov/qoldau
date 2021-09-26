@@ -1,0 +1,161 @@
+@use "sass:math";
+
+//------- {{ Variables }} -------//
+
+$white: #eee9dc;
+$bg: #2e6ba7;
+
+$horizontal-gutter: 100px;
+$border-radius: 10px;
+
+$entry-min-height: 60px;
+
+$label-width: 150px;
+$label-height: 30px;
+$label-border-radius: 5px;
+
+
+//------- {{ Styles }} -------//
+
+#wrapper {
+  position: relative;
+}
+
+.branch {
+  position: relative;
+  margin-left: $horizontal-gutter + $label-width;
+
+  &:before {
+    content: "";
+    width: math.div($horizontal-gutter, 2);
+    border-top: 1px solid $stroke;
+    position: absolute;
+    left: -$horizontal-gutter;
+    top: 50%;
+    margin-top: 1px;
+  }
+}
+
+.entry {
+  position: relative;
+  min-height: $entry-min-height;
+
+  &:before {
+    content: "";
+    height: 100%;
+    border-left: 1px solid $stroke;
+    position: absolute;
+    left: -(math.div($horizontal-gutter, 2));
+  }
+
+  &:after {
+    content: "";
+    width: math.div($horizontal-gutter, 2);
+    border-top: 1px solid $stroke;
+    position: absolute;
+    left: -(math.div($horizontal-gutter, 2));
+    top: 50%;
+    margin-top: 1px;
+  }
+
+  &:first-child {
+    &:before {
+      width: $border-radius;
+      height: 50%;
+      top: 50%;
+      margin-top: 2px;
+      border-radius: $border-radius 0 0 0;
+    }
+
+    &:after {
+      height: $border-radius;
+      border-radius: $border-radius 0 0 0;
+    }
+  }
+
+  &:last-child {
+    &:before {
+      width: $border-radius;
+      height: 50%;
+      border-radius: 0 0 0 $border-radius;
+    }
+
+    &:after {
+      height: $border-radius;
+      border-top: none;
+      border-bottom: 1px solid $stroke;
+      border-radius: 0 0 0 $border-radius;
+      margin-top: -$border-radius + 1px;
+    }
+  }
+
+  &.sole {
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      width: math.div($horizontal-gutter, 2);
+      height: 0;
+      margin-top: 1px;
+      border-radius: 0;
+    }
+  }
+}
+
+.label {
+  display: block;
+  min-width: $label-width;
+  max-width: $label-width;
+  word-wrap: anywhere;
+  padding: .5rem;
+  line-height: 1.1;
+  text-align: center;
+  border: 1px solid $stroke;
+  border-radius: .5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -50px;
+  transition: $transition;
+
+  .status {
+    &.in-process {
+      svg.indicator {
+        fill: $yellow;
+      }
+    }
+
+    &.done {
+      svg.indicator {
+        fill: $green;
+      }
+    }
+
+    &.rejected {
+      svg.indicator {
+        fill: $red;
+      }
+    }
+  }
+
+  .info {
+    margin-top: .5rem;
+  }
+
+  svg {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &:hover {
+    background: $blue;
+
+    &~.branch {
+
+      .label {
+        background: $blue;
+      }
+    }
+  }
+}
