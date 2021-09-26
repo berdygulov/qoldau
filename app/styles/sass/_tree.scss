@@ -1,161 +1,204 @@
-@use "sass:math";
+/*Now the CSS*/
 
-//------- {{ Variables }} -------//
+.tree {
+  line-height: 2rem;
 
-$white: #eee9dc;
-$bg: #2e6ba7;
-
-$horizontal-gutter: 100px;
-$border-radius: 10px;
-
-$entry-min-height: 60px;
-
-$label-width: 150px;
-$label-height: 30px;
-$label-border-radius: 5px;
-
-
-//------- {{ Styles }} -------//
-
-#wrapper {
-  position: relative;
-}
-
-.branch {
-  position: relative;
-  margin-left: $horizontal-gutter + $label-width;
-
-  &:before {
-    content: "";
-    width: math.div($horizontal-gutter, 2);
-    border-top: 1px solid $stroke;
-    position: absolute;
-    left: -$horizontal-gutter;
-    top: 50%;
-    margin-top: 1px;
-  }
-}
-
-.entry {
-  position: relative;
-  min-height: $entry-min-height;
-
-  &:before {
-    content: "";
-    height: 100%;
-    border-left: 1px solid $stroke;
-    position: absolute;
-    left: -(math.div($horizontal-gutter, 2));
-  }
-
-  &:after {
-    content: "";
-    width: math.div($horizontal-gutter, 2);
-    border-top: 1px solid $stroke;
-    position: absolute;
-    left: -(math.div($horizontal-gutter, 2));
-    top: 50%;
-    margin-top: 1px;
-  }
-
-  &:first-child {
-    &:before {
-      width: $border-radius;
-      height: 50%;
-      top: 50%;
-      margin-top: 2px;
-      border-radius: $border-radius 0 0 0;
-    }
-
-    &:after {
-      height: $border-radius;
-      border-radius: $border-radius 0 0 0;
-    }
-  }
-
-  &:last-child {
-    &:before {
-      width: $border-radius;
-      height: 50%;
-      border-radius: 0 0 0 $border-radius;
-    }
-
-    &:after {
-      height: $border-radius;
-      border-top: none;
-      border-bottom: 1px solid $stroke;
-      border-radius: 0 0 0 $border-radius;
-      margin-top: -$border-radius + 1px;
-    }
-  }
-
-  &.sole {
-    &:before {
+  &-mini {
+    .tree-parent {
+      margin-top: 0.5rem;
       display: none;
     }
 
-    &:after {
-      width: math.div($horizontal-gutter, 2);
-      height: 0;
-      margin-top: 1px;
-      border-radius: 0;
+    .tree-parent.open {
+      display: block;
+    }
+
+    .tree-item {
+      position: relative;
+      margin-left: 1.25rem;
+      margin-left: 1.7rem;
+      padding-bottom: 1rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      &:last-child {
+        border: none;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        border-top: 1px solid $stroke;
+        border-left: 1px solid $stroke;
+        height: 100%;
+        width: 1rem;
+        position: absolute;
+        bottom: -1.1rem;
+        left: -0.9rem;
+        left: -1.3rem;
+        z-index: -1;
+      }
+
+      &:last-child:before {
+        border-left: none;
+      }
+
+      &:first-child:after {
+        content: '';
+        display: block;
+        border-left: 1px solid $stroke;
+        height: 100%;
+        width: 1rem;
+        position: absolute;
+        bottom: 0.9rem;
+        left: -0.9rem;
+        left: -1.3rem;
+        z-index: -1;
+      }
+    }
+  }
+
+  &-super {
+    ul {
+      padding-top: 1.5rem;
+      position: relative;
+      transition: $transition;
+      display: flex;
+      justify-content: center;
+
+      li {
+        float: left;
+        text-align: center;
+        list-style-type: none;
+        position: relative;
+        padding: 1.5rem 5px 0 5px;
+        transition: $transition;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 50%;
+          border-top: 1px solid $stroke;
+          width: 50%;
+          height: 1.5rem;
+        }
+
+        &::after {
+          right: auto;
+          left: 50%;
+          border-left: 1px solid $stroke;
+        }
+
+        &:only-child::after,
+        &:only-child::before {
+          display: none;
+        }
+
+        &:only-child {
+          padding-top: 0;
+        }
+
+        &:first-child::before,
+        &:last-child::after {
+          border: 0 none;
+        }
+
+        &:last-child::before {
+          border-right: 1px solid $stroke;
+          border-radius: 0 .5rem 0 0;
+        }
+
+        &:first-child::after {
+          border-radius: .5rem 0 0 0;
+        }
+
+        a {
+          border: 1px solid $stroke;
+          padding: 1rem;
+          text-decoration: none;
+          font-size: .8rem;
+          display: inline-block;
+          border-radius: .5rem;
+          transition: all 0.5s;
+
+          &:hover,
+          &:hover+ul li a {
+            background: $blue;
+            color: $white;
+            border: 1px solid $stroke;
+
+            svg {
+              fill: $white;
+            }
+          }
+
+          &:hover+ul li::after,
+          &:hover+ul li::before,
+          &:hover+ul::before,
+          &:hover+ul ul::before {
+            border-color: $stroke;
+          }
+        }
+
+      }
+
+      ul::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        border-left: 1px solid $stroke;
+        width: 0;
+        height: 1.5rem;
+      }
     }
   }
 }
 
 .label {
+  max-width: 20rem;
   display: block;
-  min-width: $label-width;
-  max-width: $label-width;
-  word-wrap: anywhere;
-  padding: .5rem;
-  line-height: 1.1;
-  text-align: center;
-  border: 1px solid $stroke;
-  border-radius: .5rem;
-  position: absolute;
-  left: 0;
-  top: 50%;
-  margin-top: -50px;
-  transition: $transition;
+  padding-bottom: 1rem;
 
-  .status {
-    &.in-process {
-      svg.indicator {
-        fill: $yellow;
-      }
-    }
+  &-wrapper {
 
-    &.done {
-      svg.indicator {
-        fill: $green;
-      }
-    }
+    border: 1px solid $stroke;
+    border-radius: .5rem;
+    padding: .5rem;
+  }
 
-    &.rejected {
-      svg.indicator {
-        fill: $red;
-      }
-    }
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .info {
     margin-top: .5rem;
+
+    span {
+      text-align: left;
+    }
   }
 
-  svg {
-    width: 1.5em;
-    height: 1.5em;
+  &.in-process {
+    svg.indicator {
+      fill: $yellow;
+    }
   }
 
-  &:hover {
-    background: $blue;
+  &.done {
+    svg.indicator {
+      fill: $green;
+    }
+  }
 
-    &~.branch {
-
-      .label {
-        background: $blue;
-      }
+  &.rejected {
+    svg.indicator {
+      fill: $red;
     }
   }
 }
