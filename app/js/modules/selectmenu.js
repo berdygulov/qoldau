@@ -4,6 +4,7 @@ import 'jquery-ui/ui/widgets/selectmenu';
 window.jQuery = $
 window.$ = $
 
+/* Initialization of Selectmenu Jquery*/
 export function openSelectMenu() {
     $('.selectmenu').selectmenu({
         'open': function(event) {
@@ -12,15 +13,27 @@ export function openSelectMenu() {
             .addClass('active');
         },
         'close': function(event) {
-            const el = event.target; 
+            const el = event.target;
             $(el).parent('.input-wrapper')
-            .removeClass('active');
+                .removeClass('active');
+            if ($(el).val() !== '') {
+                $(el).parent('.input-wrapper')
+                    .addClass('filled');
+            } else {
+                $(el).parent('.input-wrapper')
+                    .removeClass('filled');
+            }
         },
-        select: function( event, el ) {
-            $(el.item.element).parents('.input-wrapper')
-                .find('.ui-selectmenu-text')
-                .css('color', '#1E1E1E');
+        'select': function( event, el ) {
+            // console.log($(el.item.element).val());
         }
     });
-    /* Initialization of Selectmenu Jquery*/
+}
+
+/* Selectmenu on Input handler*/
+export function inputSelectMenu() {
+    $('select').on('input', function() {
+        // console.log($(this).val());
+        console.log('test');
+    })
 }

@@ -1413,7 +1413,21 @@ input[type=text] {
         display: inline-block;
         position: relative;
         width: 100%;
-
+        &.filled {
+            .ui-selectmenu-text {
+                color: $dark;
+            }
+            .ui-selectmenu-button {
+                &.ui-button {
+                    border: 0.055em solid $dark;
+                    border-radius: 0.45em;
+                }
+            }
+            svg.input-arrow,
+            svg.input-icon {
+                fill: $dark;
+            }
+        }
         &.active {
             .ui-selectmenu-button {
                 &.ui-button {
