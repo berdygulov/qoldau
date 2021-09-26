@@ -4,12 +4,10 @@
 @import '../../../node_modules/bootstrap/dist/css/bootstrap-grid.css';
 @import '../../../node_modules/swiper/swiper-bundle.css';
 @import '../../../node_modules/jquery-ui/themes/base/datepicker.css';
-<<<<<<< HEAD
-=======
 @import '../../../node_modules/jquery-ui/themes/base/selectmenu.css';
 @import 'datepicker';
 @import 'selectmenu';
->>>>>>> 5f44d962a1f6926a44ffe1cd9e9151d347b7f7ff
+@import 'tree';
 
 .bred {
     border: 1px solid red;
@@ -1012,10 +1010,7 @@ body {
                     order: 1;
                 }
             }
-<<<<<<< HEAD
 
-=======
->>>>>>> 5f44d962a1f6926a44ffe1cd9e9151d347b7f7ff
             div {
                 &:nth-child(1) {
                     order: 2;
@@ -1023,10 +1018,7 @@ body {
             }
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 5f44d962a1f6926a44ffe1cd9e9151d347b7f7ff
     &-title {
         color: $blue;
         display: inline-flex;
@@ -1402,14 +1394,12 @@ input[type=text] {
     &::placeholder {
         color: $stroke;
     }
-<<<<<<< HEAD
 
-=======
     &:focus {
         outline: 0.055em solid $dark;
         border-radius: 0.45em;
     }
->>>>>>> 5f44d962a1f6926a44ffe1cd9e9151d347b7f7ff
+
     @media screen and (min-width: 576px) {
         font-size: 1.125rem;
     }
@@ -1421,23 +1411,22 @@ input[type=text] {
         font-size: 1rem;
         display: inline-block;
         position: relative;
-<<<<<<< HEAD
-
-        svg {
-=======
         width: 100%;
+
         &.active {
+
             svg.input-arrow,
             svg.input-icon {
                 fill: $dark;
             }
+
             svg.input-arrow {
                 transform: rotate(90deg);
             }
         }
+
         svg.input-arrow,
         svg.input-icon {
->>>>>>> 5f44d962a1f6926a44ffe1cd9e9151d347b7f7ff
             position: absolute;
             top: 0.55em;
             display: block;
@@ -1448,9 +1437,11 @@ input[type=text] {
             fill: $stroke;
             transition: all ease 0.2s;
         }
+
         svg.input-icon {
             left: 0.89em;
         }
+
         svg.input-arrow {
             right: 0.89em;
         }
@@ -1484,6 +1475,7 @@ input[type=text] {
             flex-direction: column;
             font-size: 1rem;
             padding-bottom: 0.8em;
+            transform: translateX(0);
 
             &:not(:last-child) {
                 border-bottom: 0.055em solid $stroke;
@@ -1834,12 +1826,8 @@ input[type=text] {
         font-size: 1rem;
         overflow: hidden;
         width: 100%;
-<<<<<<< HEAD
 
         &>* {
-=======
-        & > * {
->>>>>>> 5f44d962a1f6926a44ffe1cd9e9151d347b7f7ff
             width: 50%;
         }
 
@@ -1849,20 +1837,14 @@ input[type=text] {
             }
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 5f44d962a1f6926a44ffe1cd9e9151d347b7f7ff
     &-field,
     &-data {
         line-height: 1.125em;
         display: flex;
         align-items: center;
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 5f44d962a1f6926a44ffe1cd9e9151d347b7f7ff
     &-field {
         padding: 1em;
         color: $black;
@@ -1896,10 +1878,7 @@ input[type=text] {
         &-block {
             font-size: 1.125rem;
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> 5f44d962a1f6926a44ffe1cd9e9151d347b7f7ff
         &-data {
             padding: 1em 5.625em 1em 1em;
         }

@@ -19,6 +19,9 @@ header.openMenuPanel();
 header.closeHeaderPanel();
 range.inputRangeHandler();
 
+/* Mini Tree Script */
+require('./modules/tree');
+
 /* Clipboard function */
 if ($('.btn-clip').length > 0) {
   clipboard.clipboardFunction(1000);
