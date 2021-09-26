@@ -5,11 +5,22 @@ window.jQuery = $
 window.$ = $
 
 export function openSelectMenu() {
-    $('.number').selectmenu();
-    $('.ui-selectmenu-button.ui-button').on('click', function() {
-        console.log('selectmenu');
-    })
-    // const selectmenu = $('.selectmenu');
-
+    $('.selectmenu').selectmenu({
+        'open': function(event) {
+            const el = event.target; 
+            $(el).parent('.input-wrapper')
+            .addClass('active');
+        },
+        'close': function(event) {
+            const el = event.target; 
+            $(el).parent('.input-wrapper')
+            .removeClass('active');
+        },
+        select: function( event, el ) {
+            $(el.item.element).parents('.input-wrapper')
+                .find('.ui-selectmenu-text')
+                .css('color', '#1E1E1E');
+        }
+    });
     /* Initialization of Selectmenu Jquery*/
 }
