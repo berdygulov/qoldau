@@ -32,6 +32,7 @@ if ($('.datepicker').length > 0) {
 /* Selectmenu initialization*/
 if ($('.selectmenu').length > 0) {
   selectmenu.openSelectMenu();
+  selectmenu.inputSelectMenu();
 }
 
 /* Input focus and blur function */
