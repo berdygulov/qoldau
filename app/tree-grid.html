@@ -9,266 +9,198 @@
                         <h2 class="account-title page-title">
                             Дерево пользователей
                         </h2>
+                        <h4 class="mb-3">Специальные обозначения</h4>
+                        <div class="legend">
+                            <div class="legend-item in-process">
+                                <svg class="indicator">
+                                    <use xlink:href="images/dist/sprite.svg#half-circle"></use>
+                                </svg>
+                                <span>В процессе</span>
+                            </div>
+                            <div class="legend-item done">
+                                <svg class="indicator">
+                                    <use xlink:href="images/dist/sprite.svg#check"></use>
+                                </svg>
+                                <span>Выдано</span>
+                            </div>
+                            <div class="legend-item rejected">
+                                <svg class="indicator">
+                                    <use xlink:href="images/dist/sprite.svg#close"></use>
+                                </svg>
+                                <span>Расторгнуто</span>
+                            </div>
+                        </div>
                         <div class="dashboard-content">
                             <div class="tree-mini">
                                 <ul class="tree">
-                                    <a href="#">
+                                    <span class="label">
+                                        <div class="label-wrapper">
+                                            <div class="status done d-flex justify-content-start align-items-center">
+                                                <svg>
+                                                    <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                </svg>
+                                                <svg class="indicator">
+                                                    <title>Выдано</title>
+                                                    <use xlink:href="images/dist/sprite.svg#check"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="info d-flex flex-column align-items-start">
+                                                <span>Фамилия Имя Отчество</span>
+                                                <span>ИИН:941216502331</span>
+                                                <span>Номер договора: 15841568</span>
+                                            </div>
+                                        </div>
+                                    </span>
+                                    <li class="tree-item">
                                         <span class="label in-process">
                                             <div class="label-wrapper">
-                                                <div class="status done d-flex justify-content-start align-items-center">
+                                                <div class="status in-process d-flex justify-content-start align-items-center">
                                                     <svg>
                                                         <use xlink:href="images/dist/sprite.svg#user"></use>
                                                     </svg>
                                                     <svg class="indicator">
-                                                        <title>Title</title>
+                                                        <title>В процессе</title>
                                                         <use xlink:href="images/dist/sprite.svg#half-circle"></use>
                                                     </svg>
                                                 </div>
                                                 <div class="info d-flex flex-column align-items-start">
                                                     <span>Фамилия Имя Отчество</span>
-                                                    <span>941216502331</span>
-                                                    <span>№15841568</span>
+                                                    <span>ИИН:941216502331</span>
+                                                    <span>Номер договора: 15841568</span>
+                                                    <a href="#" class="trigger"><span class="show-text d-none">Показать пользователей</span><span class="hide-text">Скрыть пользователей</span></a>
                                                 </div>
                                             </div>
                                         </span>
-                                    </a>
-                                    <li class="tree-item">
-                                        <a href="#">
-                                            <span class="label in-process">
-                                                <div class="label-wrapper">
-                                                    <div class="status done d-flex justify-content-start align-items-center">
-                                                        <svg>
-                                                            <use xlink:href="images/dist/sprite.svg#user"></use>
-                                                        </svg>
-                                                        <svg class="indicator">
-                                                            <title>Title</title>
-                                                            <use xlink:href="images/dist/sprite.svg#half-circle"></use>
-                                                        </svg>
-                                                    </div>
-                                                    <div class="info d-flex flex-column align-items-start">
-                                                        <span>Фамилия Имя Отчество</span>
-                                                        <span>941216502331</span>
-                                                        <span>№15841568</span>
-                                                    </div>
-                                                </div>
-                                            </span>
-                                        </a>
-                                        <a href="#" class="trigger">
-                                            Open
-                                        </a>
-                                        <ul class="tree-parent open">
+                                        <ul class="tree-parent open open">
                                             <li class="tree-item view">
-                                                <a href="#">
-                                                    <span class="label in-process">
-                                                        <div class="label-wrapper">
-                                                            <div class="status done d-flex justify-content-start align-items-center">
-                                                                <svg>
-                                                                    <use xlink:href="images/dist/sprite.svg#user"></use>
-                                                                </svg>
-                                                                <svg class="indicator">
-                                                                    <title>Title</title>
-                                                                    <use xlink:href="images/dist/sprite.svg#half-circle"></use>
-                                                                </svg>
-                                                            </div>
-                                                            <div class="info d-flex flex-column align-items-start">
-                                                                <span>Фамилия Имя Отчество</span>
-                                                                <span>941216502331</span>
-                                                                <span>№15841568</span>
-                                                            </div>
+                                                <span class="label in-process">
+                                                    <div class="label-wrapper">
+                                                        <div class="status in-process d-flex justify-content-start align-items-center">
+                                                            <svg>
+                                                                <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                            </svg>
+                                                            <svg class="indicator">
+                                                                <title>В процессе</title>
+                                                                <use xlink:href="images/dist/sprite.svg#half-circle"></use>
+                                                            </svg>
                                                         </div>
-                                                    </span>
-                                                </a>
-                                                <a href="#" class="trigger">
-                                                    Open
-                                                </a>
-                                                <ul class="tree-parent open">
+                                                        <div class="info d-flex flex-column align-items-start">
+                                                            <span>Фамилия Имя Отчество</span>
+                                                            <span>ИИН:941216502331</span>
+                                                            <span>Номер договора: 15841568</span>
+                                                            <a href="#" class="trigger"><span class="show-text d-none">Показать пользователей</span><span class="hide-text">Скрыть пользователей</span></a>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                                <ul class="tree-parent open open">
                                                     <li class="tree-item view">
-                                                        <a href="" class="active">
-                                                            Child
-                                                            <li class="tree-item">
-                                                                <a href="#" class="trigger">
-                                                                    Open
-                                                                </a>
-                                                                <a href="#">
-                                                                    Parent
-                                                                </a>
-                                                                <ul class="tree-parent open">
-                                                                    <li class="tree-item view">
-                                                                        <a href="">
-                                                                            Child
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="tree-item tree-views-item">
-                                                                        <a href="" class="active">
-                                                                            Child
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="tree-item view">
-                                                                        <a href="#">
-                                                                            <span class="label in-process">
-                                                                                <div class="label-wrapper">
-                                                                                    <div class="status done d-flex justify-content-start align-items-center">
-                                                                                        <svg>
-                                                                                            <use xlink:href="images/dist/sprite.svg#user"></use>
-                                                                                        </svg>
-                                                                                        <svg class="indicator">
-                                                                                            <title>Title</title>
-                                                                                            <use xlink:href="images/dist/sprite.svg#half-circle"></use>
-                                                                                        </svg>
-                                                                                    </div>
-                                                                                    <div class="info d-flex flex-column align-items-start">
-                                                                                        <span>Фамилия Имя Отчество</span>
-                                                                                        <span>941216502331</span>
-                                                                                        <span>№15841568</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </span>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li class="tree-item view">
-                                                                        <a href="#">
-                                                                            <span class="label in-process">
-                                                                                <div class="label-wrapper">
-                                                                                    <div class="status done d-flex justify-content-start align-items-center">
-                                                                                        <svg>
-                                                                                            <use xlink:href="images/dist/sprite.svg#user"></use>
-                                                                                        </svg>
-                                                                                        <svg class="indicator">
-                                                                                            <title>Title</title>
-                                                                                            <use xlink:href="images/dist/sprite.svg#half-circle"></use>
-                                                                                        </svg>
-                                                                                    </div>
-                                                                                    <div class="info d-flex flex-column align-items-start">
-                                                                                        <span>Фамилия Имя Отчество</span>
-                                                                                        <span>941216502331</span>
-                                                                                        <span>№15841568</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </span>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                            <li class="tree-item controllers">
-                                                                <a href="#" class="trigger">
-                                                                    Parent
-                                                                </a>
-                                                                <ul class="tree-parent open">
-                                                                    <li class="tree-item view">
-                                                                        <a href="" class="active">
-                                                                            Child
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </li>
-                                                        </a>
+                                                        <span class="label in-process">
+                                                            <div class="label-wrapper">
+                                                                <div class="status in-process d-flex justify-content-start align-items-center">
+                                                                    <svg>
+                                                                        <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                                    </svg>
+                                                                    <svg class="indicator">
+                                                                        <title>В процессе</title>
+                                                                        <use xlink:href="images/dist/sprite.svg#half-circle"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="info d-flex flex-column align-items-start">
+                                                                    <span>Фамилия Имя Отчество</span>
+                                                                    <span>ИИН:941216502331</span>
+                                                                    <span>Номер договора: 15841568</span>
+                                                                    <a href="#" class="trigger"><span class="show-text d-none">Показать пользователей</span><span class="hide-text">Скрыть пользователей</span></a>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </li>
+                                                    <li class="tree-item view">
+                                                        <span class="label in-process">
+                                                            <div class="label-wrapper">
+                                                                <div class="status in-process d-flex justify-content-start align-items-center">
+                                                                    <svg>
+                                                                        <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                                    </svg>
+                                                                    <svg class="indicator">
+                                                                        <title>В процессе</title>
+                                                                        <use xlink:href="images/dist/sprite.svg#half-circle"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="info d-flex flex-column align-items-start">
+                                                                    <span>Фамилия Имя Отчество</span>
+                                                                    <span>ИИН:941216502331</span>
+                                                                    <span>Номер договора: 15841568</span>
+                                                                    <a href="#" class="trigger"><span class="show-text d-none">Показать пользователей</span><span class="hide-text">Скрыть пользователей</span></a>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </li>
+                                                    <li class="tree-item view">
+                                                        <span class="label in-process">
+                                                            <div class="label-wrapper">
+                                                                <div class="status in-process d-flex justify-content-start align-items-center">
+                                                                    <svg>
+                                                                        <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                                    </svg>
+                                                                    <svg class="indicator">
+                                                                        <title>В процессе</title>
+                                                                        <use xlink:href="images/dist/sprite.svg#half-circle"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="info d-flex flex-column align-items-start">
+                                                                    <span>Фамилия Имя Отчество</span>
+                                                                    <span>ИИН:941216502331</span>
+                                                                    <span>Номер договора: 15841568</span>
+                                                                    <a href="#" class="trigger"><span class="show-text d-none">Показать пользователей</span><span class="hide-text">Скрыть пользователей</span></a>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </li>
+                                                    <li class="tree-item view">
+                                                        <span class="label in-process">
+                                                            <div class="label-wrapper">
+                                                                <div class="status in-process d-flex justify-content-start align-items-center">
+                                                                    <svg>
+                                                                        <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                                    </svg>
+                                                                    <svg class="indicator">
+                                                                        <title>В процессе</title>
+                                                                        <use xlink:href="images/dist/sprite.svg#half-circle"></use>
+                                                                    </svg>
+                                                                </div>
+                                                                <div class="info d-flex flex-column align-items-start">
+                                                                    <span>Фамилия Имя Отчество</span>
+                                                                    <span>ИИН:941216502331</span>
+                                                                    <span>Номер договора: 15841568</span>
+                                                                    <a href="#" class="trigger"><span class="show-text d-none">Показать пользователей</span><span class="hide-text">Скрыть пользователей</span></a>
+                                                                </div>
+                                                            </div>
+                                                        </span>
                                                     </li>
                                                 </ul>
-                                            </li>
-                                            <li class="tree-item tree-views-item">
-                                                <a href="" class="active">
-                                                    Child
-                                                </a>
-                                            </li>
-                                            <li class="tree-item view">
-                                                <a href="">
-                                                    Child
-                                                </a>
-                                            </li>
-                                            <li class="tree-item view">
-                                                <a href="">
-                                                    Child
-                                                </a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="tree-item controllers">
-                                        <a href="#" class="trigger">
-                                            Parent
-                                        </a>
-                                        <ul class="tree-parent open">
-                                            <li class="tree-item view">
-                                                <a href="" class="active">
-                                                    Child
-                                                    <li class="tree-item">
-                                                        <a href="#" class="trigger">
-                                                            Open
-                                                        </a>
-                                                        <a href="#">
-                                                            Parent
-                                                        </a>
-                                                        <ul class="tree-parent open">
-                                                            <li class="tree-item view">
-                                                                <a href="">
-                                                                    Child
-                                                                </a>
-                                                            </li>
-                                                            <li class="tree-item tree-views-item">
-                                                                <a href="" class="active">
-                                                                    Child
-                                                                </a>
-                                                            </li>
-                                                            <li class="tree-item view">
-                                                                <a href="#">
-                                                                    <span class="label in-process">
-                                                                        <div class="label-wrapper">
-                                                                            <div class="status done d-flex justify-content-start align-items-center">
-                                                                                <svg>
-                                                                                    <use xlink:href="images/dist/sprite.svg#user"></use>
-                                                                                </svg>
-                                                                                <svg class="indicator">
-                                                                                    <title>Title</title>
-                                                                                    <use xlink:href="images/dist/sprite.svg#half-circle"></use>
-                                                                                </svg>
-                                                                            </div>
-                                                                            <div class="info d-flex flex-column align-items-start">
-                                                                                <span>Фамилия Имя Отчество</span>
-                                                                                <span>941216502331</span>
-                                                                                <span>№15841568</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </span>
-                                                                </a>
-                                                            </li>
-                                                            <li class="tree-item view">
-                                                                <a href="#">
-                                                                    <span class="label in-process">
-                                                                        <div class="label-wrapper">
-                                                                            <div class="status done d-flex justify-content-start align-items-center">
-                                                                                <svg>
-                                                                                    <use xlink:href="images/dist/sprite.svg#user"></use>
-                                                                                </svg>
-                                                                                <svg class="indicator">
-                                                                                    <title>Title</title>
-                                                                                    <use xlink:href="images/dist/sprite.svg#half-circle"></use>
-                                                                                </svg>
-                                                                            </div>
-                                                                            <div class="info d-flex flex-column align-items-start">
-                                                                                <span>Фамилия Имя Отчество</span>
-                                                                                <span>941216502331</span>
-                                                                                <span>№15841568</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </span>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="tree-item controllers">
-                                                        <a href="#" class="trigger">
-                                                            Parent
-                                                        </a>
-                                                        <ul class="tree-parent open">
-                                                            <li class="tree-item view">
-                                                                <a href="" class="active">
-                                                                    Child
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        <span class="label in-process">
+                                            <div class="label-wrapper">
+                                                <div class="status in-process d-flex justify-content-start align-items-center">
+                                                    <svg>
+                                                        <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                    </svg>
+                                                    <svg class="indicator">
+                                                        <title>В процессе</title>
+                                                        <use xlink:href="images/dist/sprite.svg#half-circle"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="info d-flex flex-column align-items-start">
+                                                    <span>Фамилия Имя Отчество</span>
+                                                    <span>ИИН:941216502331</span>
+                                                    <span>Номер договора: 15841568</span>
+                                                    <a href="#" class="trigger"><span class="show-text d-none">Показать пользователей</span><span class="hide-text">Скрыть пользователей</span></a>
+                                                </div>
+                                            </div>
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -289,8 +221,8 @@
                                                 </div>
                                                 <div class="info d-flex flex-column align-items-start">
                                                     <span>Фамилия Имя Отчество</span>
-                                                    <span>941216502331</span>
-                                                    <span>№15841568</span>
+                                                    <span>ИИН:941216502331</span>
+                                                    <span>Номер договора: 15841568</span>
                                                 </div>
                                             </span>
                                         </a>
@@ -311,8 +243,8 @@
                                                         </div>
                                                         <div class="info d-flex flex-column align-items-start">
                                                             <span>Фамилия Имя Отчество</span>
-                                                            <span>941216502331</span>
-                                                            <span>№15841568</span>
+                                                            <span>ИИН:941216502331</span>
+                                                            <span>Номер договора: 15841568</span>
                                                         </div>
                                                     </span>
                                                 </a>
@@ -335,8 +267,8 @@
                                                                 </div>
                                                                 <div class="info d-flex flex-column align-items-start">
                                                                     <span>Фамилия Имя Отчество</span>
-                                                                    <span>941216502331</span>
-                                                                    <span>№15841568</span>
+                                                                    <span>ИИН:941216502331</span>
+                                                                    <span>Номер договора: 15841568</span>
                                                                 </div>
                                                             </span>
                                                         </a>
@@ -361,8 +293,8 @@
                                                                         <div
                                                                             class="info d-flex flex-column align-items-start">
                                                                             <span>Фамилия Имя Отчество</span>
-                                                                            <span>941216502331</span>
-                                                                            <span>№15841568</span>
+                                                                            <span>ИИН:941216502331</span>
+                                                                            <span>Номер договора: 15841568</span>
                                                                         </div>
                                                                     </span>
                                                                 </a>
@@ -387,8 +319,8 @@
                                                                 </div>
                                                                 <div class="info d-flex flex-column align-items-start">
                                                                     <span>Фамилия Имя Отчество</span>
-                                                                    <span>941216502331</span>
-                                                                    <span>№15841568</span>
+                                                                    <span>ИИН:941216502331</span>
+                                                                    <span>Номер договора: 15841568</span>
                                                                 </div>
                                                             </span>
                                                         </a>
@@ -413,8 +345,8 @@
                                                                         <div
                                                                             class="info d-flex flex-column align-items-start">
                                                                             <span>Фамилия Имя Отчество</span>
-                                                                            <span>941216502331</span>
-                                                                            <span>№15841568</span>
+                                                                            <span>ИИН:941216502331</span>
+                                                                            <span>Номер договора: 15841568</span>
                                                                         </div>
                                                                     </span>
                                                                 </a>
@@ -439,8 +371,8 @@
                                                         </div>
                                                         <div class="info d-flex flex-column align-items-start">
                                                             <span>Фамилия Имя Отчество</span>
-                                                            <span>941216502331</span>
-                                                            <span>№15841568</span>
+                                                            <span>ИИН:941216502331</span>
+                                                            <span>Номер договора: 15841568</span>
                                                         </div>
                                                     </span>
                                                 </a>
@@ -461,8 +393,8 @@
                                                         </div>
                                                         <div class="info d-flex flex-column align-items-start">
                                                             <span>Фамилия Имя Отчество</span>
-                                                            <span>941216502331</span>
-                                                            <span>№15841568</span>
+                                                            <span>ИИН:941216502331</span>
+                                                            <span>Номер договора: 15841568</span>
                                                         </div>
                                                     </span>
                                                 </a>
@@ -485,8 +417,8 @@
                                                                 </div>
                                                                 <div class="info d-flex flex-column align-items-start">
                                                                     <span>Фамилия Имя Отчество</span>
-                                                                    <span>941216502331</span>
-                                                                    <span>№15841568</span>
+                                                                    <span>ИИН:941216502331</span>
+                                                                    <span>Номер договора: 15841568</span>
                                                                 </div>
                                                             </span>
                                                         </a></li>
@@ -508,8 +440,8 @@
                                                                 </div>
                                                                 <div class="info d-flex flex-column align-items-start">
                                                                     <span>Фамилия Имя Отчество</span>
-                                                                    <span>941216502331</span>
-                                                                    <span>№15841568</span>
+                                                                    <span>ИИН:941216502331</span>
+                                                                    <span>Номер договора: 15841568</span>
                                                                 </div>
                                                             </span>
                                                         </a>
@@ -532,8 +464,8 @@
                                                                 </div>
                                                                 <div class="info d-flex flex-column align-items-start">
                                                                     <span>Фамилия Имя Отчество</span>
-                                                                    <span>941216502331</span>
-                                                                    <span>№15841568</span>
+                                                                    <span>ИИН:941216502331</span>
+                                                                    <span>Номер договора: 15841568</span>
                                                                 </div>
                                                             </span>
                                                         </a>

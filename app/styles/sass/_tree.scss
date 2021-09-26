@@ -1,11 +1,49 @@
 /*Now the CSS*/
 
+.legend {
+  margin-bottom: 2rem;
+
+  &-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+.in-process {
+  svg.indicator {
+    fill: $yellow;
+  }
+}
+
+.done {
+  svg.indicator {
+    fill: $green;
+  }
+}
+
+.rejected {
+  svg.indicator {
+    fill: $red;
+  }
+}
+
 .tree {
   line-height: 2rem;
 
   &-mini {
     .tree-parent {
-      margin-top: 0.5rem;
       display: none;
     }
 
@@ -46,14 +84,13 @@
       }
 
       &:first-child:after {
-        content: '';
+        content: "";
         display: block;
         border-left: 1px solid $stroke;
-        height: 100%;
+        height: calc(100% + 2rem);
         width: 1rem;
         position: absolute;
-        bottom: 0.9rem;
-        left: -0.9rem;
+        top: -1rem;
         left: -1.3rem;
         z-index: -1;
       }
@@ -181,24 +218,6 @@
 
     span {
       text-align: left;
-    }
-  }
-
-  &.in-process {
-    svg.indicator {
-      fill: $yellow;
-    }
-  }
-
-  &.done {
-    svg.indicator {
-      fill: $green;
-    }
-  }
-
-  &.rejected {
-    svg.indicator {
-      fill: $red;
     }
   }
 }
