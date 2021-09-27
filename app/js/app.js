@@ -38,9 +38,9 @@ if ($('.selectmenu').length > 0) {
   selectmenu.inputSelectMenu();
 }
 
-/* Input focus and blur function */
+/* Input focus,input and blur handler */
 if ($('input').length > 0 ) {
-  /* Datepicker or Select handler function*/
+  
   $('input').on('focus', function() {
     $(this).parent('.input-wrapper')
       .addClass('active');
@@ -48,6 +48,13 @@ if ($('input').length > 0 ) {
   $('input').on('blur', function() {
     $(this).parent('.input-wrapper')
       .removeClass('active');
+      if ($(this).val() !== '') {
+        $(this).parent('.input-wrapper')
+          .addClass('filled');
+      } else {
+        $(this).parent('.input-wrapper')
+          .removeClass('filled');
+      }
   })
 };
 

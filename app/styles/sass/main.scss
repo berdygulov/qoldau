@@ -139,6 +139,7 @@ body {
     padding: 0.5em 1em;
     line-height: 1.5em;
     transition: $transition;
+    cursor: pointer;
 
     svg {
         width: 1.5em;
@@ -220,7 +221,6 @@ body {
         border-color: $stroke;
         color: $dark;
         background: transparent;
-
         &:hover {
             border-color: $blue;
             color: $white;
@@ -242,6 +242,15 @@ body {
         border-color: $white;
         color: $white;
         background: transparent;
+        &:hover {
+            border-color: $blue;
+            color: $white;
+            background: $blue;
+
+            svg {
+                fill: $white;
+            }
+        }
 
         svg {
             fill: $white;
@@ -265,6 +274,15 @@ body {
 
         svg {
             fill: $blue;
+        }
+        &:hover {
+            border-color: $blue;
+            color: $white;
+            background: $blue;
+
+            svg {
+                fill: $white;
+            }
         }
     }
 
@@ -1383,7 +1401,10 @@ body {
 }
 
 /* Input element*/
-input[type=text] {
+input[type=text],
+input[type=tel],
+input[type=number],
+input[type=email] {
     padding: 0.55em 2.4em 0.55em 2.4em;
     border: 0.055em solid $stroke;
     border-radius: 0.45em;
@@ -1414,6 +1435,11 @@ input[type=text] {
         position: relative;
         width: 100%;
         &.filled {
+            input {
+                border: 0.055em solid $dark;
+                border-radius: 0.45em;
+                color: $dark;
+            }
             .ui-selectmenu-text {
                 color: $dark;
             }
@@ -1468,7 +1494,7 @@ input[type=text] {
         }
 
         &.no_icon {
-            input[type=text] {
+            input {
                 padding: 0.55em 0.89em 0.55em 0.89em;
             }
         }
@@ -1894,7 +1920,6 @@ input[type=text] {
             max-height: 1.2rem;
         }
     }
-
     @media screen and (min-width: 576px) {
         &-block {
             font-size: 1.125rem;
@@ -1905,3 +1930,75 @@ input[type=text] {
         }
     }
 }
+
+/* Registration page */
+.registration {
+    &-block {
+        font-size: 1rem;
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+    }
+    &-blocks {
+        &-row {
+            &:not(:first-child) {
+                margin-top: 2rem;
+            }
+            & > .row {
+                & > div {
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    &-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+    } 
+    &-btn {
+        font-size: 1.2rem;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }                
+    }
+    @media screen and (min-width: 992px) {
+        &-blocks {
+            &-row {
+                & > .row {
+                    margin-bottom: -1.5rem;
+                    & > div {
+                        &:last-child {
+                            margin-bottom: 1.5rem;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 576px) {
+        &-btn {
+            font-size: 1.25rem; 
+            &:not(:last-child) {
+                margin-right: 1rem;
+                margin-bottom: 0;
+            }              
+        }
+        &-buttons {
+            margin-top: 0;
+            flex-direction: row;   
+            align-items: center;  
+        }
+    }
+}
+/* Dashboard general styles */
+// .dashboard {
+//     &-title {
+//         margin-bottom: 0.5em;
+//     }
+// }

@@ -14,6 +14,15 @@ export function openDataPicker() {
         'showOtherMonths': true,
         'prevText': '',
         'nextText': '',
+        'onSelect': function(text, obj ) {
+            if ($(obj.input).val() !== '') {
+              $(obj.input).parent('.input-wrapper')
+                .addClass('filled');
+            } else {
+              $(obj.input).parent('.input-wrapper')
+                .removeClass('filled');
+            }          
+        } 
         // 'defaultDate': '',
     });
 }

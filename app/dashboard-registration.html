@@ -1,0 +1,362 @@
+<!--#set var="title" value="Qoldau" -->
+<!--#include virtual="/parts/header.html" -->
+<div class="main-content">
+    <section class="registration page">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="registration-inner">
+                        <h4 class="registration-title page-title">
+                            Регистрация пользователя
+                        </h4>
+                        <form action="" method="POST">
+                            <div class="registration-blocks-row">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="registration-blocks-title">
+                                            Паспортные данные
+                                        </h5>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="name">Имя:</label>
+                                            <div class="input-wrapper">
+                                                <input name="name" id="name" type="text" placeholder="Например, Ерлан">
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                </svg>
+                                            </div>                                                                
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="lastname">Фамилия:</label>
+                                            <div class="input-wrapper">
+                                                <input name="lastname" id="lastname" type="text" placeholder="Например, Ерланов">
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                </svg>
+                                            </div>                                                                
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="lastname">Отчество:</label>
+                                            <div class="input-wrapper">
+                                                <input name="lastname" id="lastname" type="text" placeholder="Например, Ерланович">
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                </svg>
+                                            </div>                                                                
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="date-of-birth">Дата рождения:</label>
+                                            <div class="input-wrapper">
+                                                <input type="text" name="date-of-birth" id="date-of-birth" class="datepicker" placeholder="Выбрать">
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#calendar-dates"></use>
+                                                </svg>
+                                                <svg class="input-arrow">
+                                                    <use xlink:href="images/dist/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                            </div>                                                                
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="sex">Пол:</label>
+                                            <div class="input-wrapper">
+                                                <select name="sex" id="sex" class="selectmenu">
+                                                    <option selected value="">Выбрать</option>
+                                                    <option>Мужской</option>
+                                                    <option>Женский</option>
+                                                </select>
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                </svg>
+                                                <svg class="input-arrow">
+                                                    <use xlink:href="images/dist/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                            </div>                                                               
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="marital-status">Семейное положение:</label>
+                                            <div class="input-wrapper">
+                                                <select name="marital-status" id="marital-status" class="selectmenu">
+                                                    <option selected value="">Выбрать:</option>
+                                                    <option>Не замужен/Не женат</option>
+                                                    <option>Замужен/Женат</option>
+                                                </select>
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#user-list"></use>
+                                                </svg>
+                                                <svg class="input-arrow">
+                                                    <use xlink:href="images/dist/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                            </div>                                                               
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="registration-blocks-row">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="registration-blocks-title">
+                                            Личные данные
+                                        </h5>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="registration-address">Адрес прописки:</label>
+                                            <div class="input-wrapper">
+                                                <input name="registration-address" id="registration-address" type="text" placeholder="Например, г. Уральск, ул. Абая, 11, кв. 15">
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#pin"></use>
+                                                </svg>
+                                            </div>                                                                
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="residential-address">Адрес проживания:</label>
+                                            <div class="input-wrapper">
+                                                <input name="residential-address" id="residential-address" type="text" placeholder="Например, г. Уральск, ул. Абая, 11, кв. 15">
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#pin"></use>
+                                                </svg>
+                                            </div>                                                                
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="city">Город:</label>
+                                            <div class="input-wrapper">
+                                                <select name="city" id="city" class="selectmenu">
+                                                    <option selected value="">Выбрать</option>
+                                                    <option>Уральск</option>
+                                                    <option>Атырау</option>
+                                                    <option>Актобе</option>
+                                                    <option>Актау</option>
+                                                </select>
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#pin"></use>
+                                                </svg>
+                                                <svg class="input-arrow">
+                                                    <use xlink:href="images/dist/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                            </div>                                                              
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="social-status">Социальное положение:</label>
+                                            <div class="input-wrapper">
+                                                <input name="social-status" id="social-status" type="text" placeholder="Например, женат">
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#user-list"></use>
+                                                </svg>
+                                            </div>                                                                  
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="place-of-work">Место работы:</label> 
+                                            <div class="input-wrapper">
+                                                <input name="place-of-work" id="place-of-work" type="text" placeholder="Например, ТОО “Организация”">
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#toolbox"></use>
+                                                </svg>
+                                            </div>                                                              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="registration-blocks-row">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="registration-blocks-title">
+                                            Контактные данные
+                                        </h5>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="phone-number">Контактный телефон:</label>
+                                            <div class="input-wrapper">
+                                                <input name="phone-number" id="phone-number" type="tel" placeholder="Например, +7 777 555 5555">
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#smartphone"></use>
+                                                </svg>
+                                            </div>                                                                
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="additional-phone-number">Дополнительный телефон:</label>
+                                            <div class="input-wrapper">
+                                                <input name="additional-phone-number" id="additional-phone-number" type="tel" placeholder="Например, +7 777 555 5555">
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#smartphone"></use>
+                                                </svg>
+                                            </div>                                                                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="registration-blocks-row">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5 class="registration-blocks-title">
+                                            Менеджер
+                                        </h5>
+                                    </div>
+                                    <div class="col-12 col-lg-6 col-xl-4">
+                                        <div class="registration-block">
+                                            <label for="manager">Менеджер:</label>
+                                            <div class="input-wrapper">
+                                                <select name="manager" id="manager" class="selectmenu">
+                                                    <option selected value="">Выбрать</option>
+                                                    <option>Ермаков Иван Дмитриевич</option>
+                                                    <option>Хромова Мария Гордеевна</option>
+                                                    <option>Орлова Алина Николаевна</option>
+                                                    <option>Ефимов Сергей Андреевич</option>
+                                                </select>
+                                                <svg class="input-icon">
+                                                    <use xlink:href="images/dist/sprite.svg#user"></use>
+                                                </svg>
+                                                <svg class="input-arrow">
+                                                    <use xlink:href="images/dist/sprite.svg#arrow-right"></use>
+                                                </svg>
+                                            </div>                                                              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="registration-blocks-row">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="registration-block">
+                                            <div class="registration-buttons d-flex">
+                                                <button type="submit" href="#" class="registration-btn btn btn-md btn-blue_outlined icon_left">
+                                                    <svg>
+                                                        <use xlink:href="images/dist/sprite.svg#file-add"></use>
+                                                    </svg>
+                                                    Зарегистрировать
+                                                </button>
+                                                <button type="submit" href="#" class="registration-btn btn btn-md btn-blue_outlined icon_left">
+                                                    <svg>
+                                                        <use xlink:href="images/dist/sprite.svg#home-alt"></use>
+                                                    </svg>
+                                                    Личный кабинет
+                                                </button>
+                                            </div>                                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+    </section>
+</div> <!-- Main-content div-->
+<!--#include virtual="/parts/footer.html" -->
+
+<!-- <div class="input-wrapper">
+    <input type="text" class="datepicker" placeholder="Выбрать дату">
+    <svg class="input-icon">
+        <use xlink:href="images/dist/sprite.svg#calendar-dates"></use>
+    </svg>
+    <svg class="input-arrow">
+        <use xlink:href="images/dist/sprite.svg#arrow-right"></use>
+    </svg>
+</div>
+<br>
+<br>
+<div class="input-wrapper">
+    <input type="text" class="datepicker" placeholder="Выбрать дату">
+    <svg class="input-icon">
+        <use xlink:href="images/dist/sprite.svg#calendar-dates"></use>
+    </svg>
+    <svg class="input-arrow">
+        <use xlink:href="images/dist/sprite.svg#arrow-right"></use>
+    </svg>
+</div>
+<br>
+<br>
+<div class="input-wrapper">
+    <input type="text" placeholder="ФИО">
+    <svg class="input-icon">
+        <use xlink:href="images/dist/sprite.svg#calendar-dates"></use>
+    </svg>
+</div>
+<br>
+<br>
+<div class="input-wrapper no_icon">
+    <input type="text" placeholder="ФИО">
+</div>
+<br>
+<br>
+<div class="input-wrapper">
+    <select name="city" class="selectmenu">
+        <option selected value="">Выбрать город</option>
+        <option>Кызылорда</option>
+        <option>Уральск</option>
+        <option>Атырау</option>
+    </select>
+    <svg class="input-icon">
+        <use xlink:href="images/dist/sprite.svg#pin"></use>
+    </svg>
+    <svg class="input-arrow">
+        <use xlink:href="images/dist/sprite.svg#arrow-right"></use>
+    </svg>
+</div>
+<br>
+<br>
+<div class="input-wrapper">
+    <select name="number" class="selectmenu">
+        <option selected value="">Выбрать Цифру</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+    </select>
+    <svg class="input-icon">
+        <use xlink:href="images/dist/sprite.svg#pin"></use>
+    </svg>
+    <svg class="input-arrow">
+        <use xlink:href="images/dist/sprite.svg#arrow-right"></use>
+    </svg>
+</div>
+<br>
+<br>
+<div class="shortinfo-block">
+    <span class="shortinfo-field" >
+        ИИН:
+    </span>
+    <span class="shortinfo-data" id="clipboard1">
+        941216502331 941216502331 941216502331
+        <button class="shortinfo-btn btn-clip" type="button" data-clipboard-target="#clipboard1">
+            <svg >
+                <use xlink:href="images/dist/sprite.svg#clipboard"></use>
+            </svg>
+        </abutton>
+    </span>
+</div>
+<br>
+<div class="shortinfo-block">
+    <span class="shortinfo-field" >
+        Тел:
+    </span>
+    <span class="shortinfo-data" id="clipboard2">
+        87477524555
+        <button class="shortinfo-btn btn-clip" type="button" data-clipboard-target="#clipboard2">
+            <svg >
+                <use xlink:href="images/dist/sprite.svg#clipboard"></use>
+            </svg>
+        </abutton>
+    </span>
+</div> -->
