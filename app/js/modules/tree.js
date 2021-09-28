@@ -6,7 +6,7 @@ window.$ = $;
 $('.trigger').on('click', function(e){
     e.preventDefault();
     
-    var childUl = $(this).parents('span').siblings("ul.tree-parent");
+    const childUl = $(this).parents('span').siblings("ul.tree-parent");
     
     if( childUl.hasClass('open') ){
       
